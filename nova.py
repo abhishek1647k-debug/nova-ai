@@ -41,6 +41,17 @@ try:
         elif "spotify" in command:
             talk ("Opening Spotify")    
             webbrowser.open("https://spotify.com")
+        
+        elif "send message" in command:
+            talk ("Sending message")
+            pywhatkit.sendwhatmsg_instantly(
+                "+919325816033",
+                "Hello from Nova AI",
+        
+            )
+            
+            import pyautogui
+            pyautogui.press ("enter")
 
         else:
             talk("Command not found")
