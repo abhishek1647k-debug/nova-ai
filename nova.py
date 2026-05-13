@@ -1,6 +1,7 @@
 import speech_recognition as sr
 import pyttsx3
 import pywhatkit
+import webbrowser
 
 listener = sr.Recognizer()
 
@@ -28,6 +29,18 @@ try:
         if "youtube" in command:
             talk("Opening YouTube")
             pywhatkit.playonyt("YouTube")
+        
+        elif "google" in command:
+            talk ("Opening Google")
+            webbrowser.open("https://google.com")
+
+        elif "instagram" in command:
+            talk ("Opening Instagram")
+            webbrowser.open("https://instagram.com")
+
+        elif "spotify" in command:
+            talk ("Opening Spotify")    
+            webbrowser.open("https://spotify.com")
 
         else:
             talk("Command not found")
