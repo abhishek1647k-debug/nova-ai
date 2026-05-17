@@ -2,6 +2,7 @@ import speech_recognition as sr
 import pyttsx3
 import pywhatkit
 import webbrowser
+import os
 
 listener = sr.Recognizer()
 
@@ -49,7 +50,31 @@ try:
                 "Hello from Nova AI",
         
             )
-            
+
+        elif "open chrome" in command:
+              talk ("Opening Chrome")
+              os.startfile("C:\\Program Files\\Google\\chrome\\Application\\chrome.exe")
+              
+        elif "open calculator" in command:
+            talk ("Opening Calculator")
+            os.system("calc")
+         
+        elif "open notepad" in command:
+            talk ("Opening Notepad")
+            os.system("notepad")
+         
+        elif "shutdown pc" in command:
+            talk("Shutting down your PC")
+            os.system("shutdown /s/t/ 5")
+
+        elif "restart pc" in command:
+             talk("Restarting your PC")
+             os.system("shutdown /r/t/5")
+
+        elif "lock pc" in command:
+            talk("Locking your PC")
+            os.system("rundll32.exe user32.dll,LockWorkStation")
+                     
             import pyautogui
             pyautogui.press ("enter")
 
